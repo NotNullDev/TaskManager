@@ -1,0 +1,1 @@
+1. Server, ktory bedzie tylko przechowywal plik z grupami i zadaniami oraz wysylal go na zadanie oraz edytowal.

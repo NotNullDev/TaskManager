@@ -1,0 +1,37 @@
+Aplikacja bedzie umozliwiala dodawanie zadan i obsluge, ktore beda w grupach.
+
+Aplikacja bedzie webowa, oblugiwac bedzie dwa UI:
+	-mobilny,
+	-tablet/pc.
+
+Grupa bedzie zawierala:
+	-nazwe (UNIQUE),
+	-date stworzena grupy,
+	-date planowanego zakonczenia wszystkich zadan z grupy,
+	-id(ktore bedzie sluzylo do sortowania grup),
+	-autora.
+
+Grupy bedzie mozna dodawac do ekranu glownego (szybki wybor).
+
+Zadanie bedzie zawieralo:
+	-nazwe zadania (UNIQUE dla grupy)(bedzie wyswietlane jako reprezentacja zadania),
+	-id zadania (sortowanie),
+	-opis szczegolowy zadania,
+	-autora,
+	-data stworzenia zadania,
+	-date planowanego zakonczenia zadania.
+
+Aplikacja bedzie obslugiwala drag&drop dla sortowania grup oraz zadan:
+	-dla moblinych aplikacji bedzie to lista(flexbox).
+	-dla pc apliakcji bedzie to siatka (grid).
+
+Najpierw bedzie to aplikacja jedno osobowa, nastepnie grupa bedzie zawierala admin userow,
+ktorzy beda mogli dodawac, edytowac zadania oraz dodawac nowe osoby do grupy zadania,
+ wlasciciela, ktory bedzie adminem oraz bedzie mogl usunac grupe.
+
+Bedzie opcja oblusgi wszystkiego przez cms.
+
+Uzyte technologie:
+	-html,
+	-css,
+	-js.
