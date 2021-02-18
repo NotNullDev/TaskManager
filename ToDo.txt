@@ -1,1 +1,8 @@
-1. Server, ktory bedzie tylko przechowywal plik z grupami i zadaniami oraz wysylal go na zadanie oraz edytowal.
+1. Server, ktory bedzie tylko przechowywal plik z grupami i zadaniami oraz wysylal go na zadanie oraz edytowal. #done
+2. Przyomniec sobie podstawy reacta #Done
+3. Nauczyc sie korzystac z fetch api
+4. Zrozumiec jak dziala useEffect (kiedy zostaje wywolany) #done
+5. Animacje w reackcie - czy sa inne niz w css?
+6. Animacje w css.
+7. Drag&Drop w react.
+8. Co to nextjs i czy moze mi sie przydac?

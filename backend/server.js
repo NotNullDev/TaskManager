@@ -9,7 +9,7 @@ const connection = require("./middleware/connection");
 // });
 
 const app = express();
-const port = 3000;
+const port = 8000;
 
 //middleware
 app.use(express.json());

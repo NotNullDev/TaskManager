@@ -32,6 +32,6 @@ ktorzy beda mogli dodawac, edytowac zadania oraz dodawac nowe osoby do grupy zad
 Bedzie opcja oblusgi wszystkiego przez cms.
 
 Uzyte technologie:
-	-html,
-	-css,
-	-js.
+	-React,
+	-fetch,
+	-redux albo context - do zdecydowania. #context;
