@@ -8,19 +8,23 @@ export const GroupsProvider = ({ children }) => {
 
     useEffect(() => {
         const fetchGroups = async () => {
-            const fetchedGroups = await fetch("http://51.116.118.52:8000/api/data/groups");
-            console.log(fetchedGroups);
-            console.log(fetchedGroups.err, "error!");
-            setGroups(fetchedGroups);
+            fetch("http://localhost:8000/api/data/groups", {
+            })
+                .then(resp => resp.json())
+                .then(data => setGroups(data), err => console.log("error!!!: ", err));
+
         }
         fetchGroups();
     }, []);
 
     return (
         <GroupsContext.Provider value={
-            groups,
-            setGroups
-        }>
+            {
+                groups,
+                setGroups
+            }}
+
+        >
             {children}
         </GroupsContext.Provider>
     );

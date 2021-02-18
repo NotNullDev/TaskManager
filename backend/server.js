@@ -1,6 +1,7 @@
 const express = require("express")
 const path = require("path");
 const connection = require("./middleware/connection");
+const cors = require("cors");
 
 // fs.readFile("data.json", (err, d) => {
 //     if (err) console.log("error reading file");
@@ -13,12 +14,15 @@ const port = 8000;
 
 //middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(connection);
+app.use(cors());
 
 //data api
 app.use("/api/data", require("./routes/api/data"));
 
+app.get("/", (req, res) => res.send());
 
 // const saveData = (dataToSave) => {
 //     fs.writeFile(

@@ -1,10 +1,17 @@
-import { GroupsProvider } from "../data/data"
+import { GroupsContext } from "../data/data"
+import GroupContainer from "./GroupContainer"
 
 const Groups = () => {
+    const sortFunc = (a, b) => {
+        return a.id - b.id;
+    }
+
     return (
-        <GroupsProvider.Consumer>
-            {value => value.groups.map(group => group.tasks.map(task => <div>task.name ?? error</div>)) ?? <div>error!!!</div>}
-        </GroupsProvider.Consumer>
+        <ul>
+            <GroupsContext.Consumer>
+                {value => value.groups.sort(sortFunc).map(group => <GroupContainer group={group} key={group.id} />)}
+            </GroupsContext.Consumer>
+        </ul>
     );
 }
 
