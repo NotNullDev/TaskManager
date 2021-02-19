@@ -1,31 +1,31 @@
-import { BrowserRouter as Router, Route, Switch, useParams } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom"
 
 import Navbar from "./components/Navbar";
 import Groups from "./components/Groups";
+import Tasks from "./components/Tasks"
+import TaskDetails from "./components/TaskDetails"
 
 import { GroupsProvider } from "./data/data";
 
-const Tasks = () => {
-  const { group } = useParams();
-  return <div>{group.id}</div>
-}
+
 
 function App() {
 
   return (
     <GroupsProvider>
       <div className="App">
+            <Router>
         <Navbar />
         <main>
           <div className="main-container">
-            <Router>
               <Switch>
                 <Route exact path="/" component={Groups} />
-                <Route path="/:id/tasks" component={Tasks} />
+                <Route exact path="/:id/tasks" component={Tasks} />
+                <Route exact path="/:id/tasks/:task_id" component={TaskDetails} />
               </Switch>
-            </Router>
           </div>
         </main>
+            </Router>
       </div>
     </GroupsProvider>
   );

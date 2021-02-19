@@ -1,18 +1,19 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.App{
+.App {
   display: flex;
   flex-direction: column;
   padding: 0 24px;
@@ -20,31 +21,32 @@ code {
   background-color: gray;
 }
 
-header{
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
 }
-main{
+main {
   display: flex;
   flex-grow: 7;
   width: 100%;
   justify-content: center;
 }
 
-.main-container{
+.main-container {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position:relative;
+  position: relative;
   width: 90%;
   margin-top: 25px;
   margin-bottom: 25px;
   border: 1px solid black;
   border-radius: 10px;
 }
-.group-container{
+.group-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,14 +58,65 @@ main{
   padding: 20px 10px;
   cursor: pointer;
 }
-.group-container:hover{
+.group-container:hover {
+  width: 90%;
   background-color: rgb(65, 65, 65);
   color: gray;
 }
 
-ul{
-  width:100%;
+.task-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  box-sizing: content-box;
+  margin: 10px 0px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px 10px;
+  cursor: pointer;
 }
-Link{
+
+.task-container:hover {
+  background-color: rgb(65, 65, 65);
+  color: gray;
+}
+
+ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: 75vh;
+  padding: 0;
+  overflow-y: scroll;
+}
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+.header-link {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-height: 410) {
+  .App {
+    display: none;
+  }
 }

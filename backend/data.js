@@ -8,12 +8,27 @@ const data = {
             "end-date": "2021-12-12",
             "tasks": [
                 {
+                    "id": 1,
                     "name": "task one",
                 },
                 {
+                    "id": 2,
                     "name": "task two",
                 },
                 {
+                    "id": 3,
+                    "name": "task three",
+                },
+                {
+                    "id": 4,
+                    "name": "task one",
+                },
+                {
+                    "id": 5,
+                    "name": "task two",
+                },
+                {
+                    "id": 6,
                     "name": "task three",
                 },
             ]
@@ -26,9 +41,11 @@ const data = {
             "end-date": "2021-12-12",
             "tasks": [
                 {
+                    "id": 1,
                     "name": "task one",
                 },
                 {
+                    "id": 2,
                     "name": "task two",
                 },
             ]
